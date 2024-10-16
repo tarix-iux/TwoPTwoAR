@@ -36,6 +36,9 @@ class Motor:
             self.Direction = 'back'
             GPIO.output(self.Pin1, GPIO.LOW)
             GPIO.output(self.Pin2, GPIO.HIGH)
+        elif direction == 'none':
+            GPIO.output(self.Pin1, GPIO.LOW)
+            GPIO.output(self.Pin2, GPIO.LOW)
         else:
             return "Error: Invalid Direction"
         
